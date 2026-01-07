@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 6 - Effet Parallaxe</title>
+    <link rel="stylesheet" href="exercice6.css">
+    <link rel="stylesheet" href="../reflexion.css">
+</head>
+<body>
+
+<style>
+    body {
+        padding-bottom: 70px !important; 
+        margin-bottom: 0 !important;
+    }
+    #tp-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 99999;
+        background: #000000; 
+        color: white;
+        border-top: 1px solid #333;
+        padding: 10px 20px;
+        font-family: 'Poppins', sans-serif, Arial, sans-serif;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+        box-sizing: border-box;
+    }
+    #tp-nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 0.9rem;
+        background: #222;
+        padding: 8px 15px;
+        border-radius: 4px;
+        transition: 0.3s;
+        border: 1px solid #333;
+        white-space: nowrap;
+    }
+    #tp-nav a:hover {
+        background: #ffffff;
+        color: #000000;
+        border-color: #ffffff;
+    }
+    #tp-nav span {
+        opacity: 0.4;
+        font-size: 0.9rem;
+        cursor: default;
+        color: #888;
+    }
+    #tp-nav .nav-title {
+        font-weight: 600;
+        font-size: 0.8rem;
+        opacity: 0.9;
+        text-align: center;
+        margin: 0 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    #tp-nav .nav-home-link {
+        color: #888 !important;
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+        font-size: 0.75em !important;
+        text-decoration: underline !important;
+        margin-top: 2px;
+        display: inline-block;
+    }
+    #tp-nav .nav-home-link:hover {
+        color: white !important;
+        background: none !important;
+    }
+    @media (max-width: 500px) {
+        #tp-nav .nav-title { display: none; }
+    }
+</style>
+
+<nav id="tp-nav"><a href="../tp5/exercice5.html">&#8592; Préc.</a><div class="nav-title">TP5 - exercice6<br><a href="../index.html" class="nav-home-link">&#8962; Accueil</a></div><a href="../tp6/ex3.html">Suiv. &#8594;</a></nav>
+
+
+
+
+
+
+
+
+
+    <div class="parallax image-1">
+        <div class="caption">
+            <span class="border">EFFET PARALLAXE</span>
+        </div>
+    </div>
+
+    <div class="content">
+        <h3>Principe de fonctionnement</h3>
+        <p>
+            Le défilement parallaxe (parallax scrolling) est une technique de conception web où l'arrière-plan se déplace à une vitesse différente de celle du contenu de premier plan lors du défilement. Cela crée une illusion de profondeur et de dynamisme.
+        </p>
+    </div>
+
+    <div class="parallax image-2">
+        <div class="caption">
+            <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">
+                PROPRIÉTÉ CSS
+            </span>
+        </div>
+    </div>
+
+    <div class="content">
+        <h3>La propriété background-attachment</h3>
+        <p>
+            En CSS, l'effet est réalisé grâce à la propriété <code>background-attachment: fixed;</code>.
+            Elle permet de fixer l'image d'arrière-plan par rapport à la fenêtre du navigateur (viewport). Ainsi, lorsque l'utilisateur fait défiler la page, le bloc contenant l'image bouge, mais l'image à l'intérieur reste fixe, ce qui crée l'effet de fenêtre.
+        </p>
+    </div>
+
+    <div class="parallax image-3">
+        <div class="caption">
+            <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">
+                MISE EN PLACE
+            </span>
+        </div>
+    </div>
+
+    <div class="content">
+        <h3>Autres styles nécessaires</h3>
+        <p>
+            Pour un rendu optimal, on associe généralement cette propriété à :<br>
+            - <code>background-position: center;</code> pour centrer l'image.<br>
+            - <code>background-repeat: no-repeat;</code> pour éviter la répétition.<br>
+            - <code>background-size: cover;</code> pour que l'image couvre toute la zone.<br>
+            - Une hauteur minimale (<code>min-height</code>) pour garantir la visibilité de l'image.
+        </p>
+    </div>
+
+    <div class="parallax image-1">
+        <div class="caption">
+            <span class="border">FIN DU TUTORIEL</span>
+        </div>
+    </div>
+
+    <section class="reflexion">
+        <h2>Mon retour sur cet exercice (EXERCICE IMPOSÉ)</h2>
+
+        <h3>Ce que j'ai appris</h3>
+        <p>
+            J'ai découvert l'effet parallax avec <code>background-attachment: fixed;</code>, l'image reste fixe pendant que le contenu scroll, créant une illusion de profondeur en pur CSS.
+        </p>
+
+        <h3>Niveau de difficulté</h3>
+        <p><span class="difficulte">⭐⭐ (2/5) - Facile</span></p>
+        <p>
+            Honnêtement, c'est plutôt simple une fois qu'on a compris le principe de <code>background-attachment: fixed</code>.
+            Le plus dur c'était de trouver de bonnes images et de bien ajuster les hauteurs pour que l'effet soit visible.
+            Si les blocs sont trop petits, on voit même pas l'effet. Mais niveau code, c'est vraiment pas compliqué.
+        </p>
+
+        <h3>Mon avis sur l'intérêt pédagogique</h3>
+        <p>
+            Effet visuel moderne très utilisé sur les sites actuels, simple à mettre en place avec CSS.
+        </p>
+
+        <h3>Ce que je pense de mon résultat</h3>
+        <div class="auto-eval">
+            <p><strong>Points positifs :</strong> L'effet parallax fonctionne bien, les images sont bien centrées et le texte explicatif est clair</p>
+        </div>
+    </section>
+
+</body>
+</html>

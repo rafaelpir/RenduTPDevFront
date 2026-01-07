@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>TP7 - Exercice 3</title>
+    <link rel="stylesheet" href="../reflexion.css" />
+</head>
+<body>
+
+<style>
+    body {
+        padding-bottom: 70px !important; 
+        margin-bottom: 0 !important;
+    }
+    #tp-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 99999;
+        background: #000000; 
+        color: white;
+        border-top: 1px solid #333;
+        padding: 10px 20px;
+        font-family: 'Poppins', sans-serif, Arial, sans-serif;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+        box-sizing: border-box;
+    }
+    #tp-nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 0.9rem;
+        background: #222;
+        padding: 8px 15px;
+        border-radius: 4px;
+        transition: 0.3s;
+        border: 1px solid #333;
+        white-space: nowrap;
+    }
+    #tp-nav a:hover {
+        background: #ffffff;
+        color: #000000;
+        border-color: #ffffff;
+    }
+    #tp-nav span {
+        opacity: 0.4;
+        font-size: 0.9rem;
+        cursor: default;
+        color: #888;
+    }
+    #tp-nav .nav-title {
+        font-weight: 600;
+        font-size: 0.8rem;
+        opacity: 0.9;
+        text-align: center;
+        margin: 0 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    #tp-nav .nav-home-link {
+        color: #888 !important;
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+        font-size: 0.75em !important;
+        text-decoration: underline !important;
+        margin-top: 2px;
+        display: inline-block;
+    }
+    #tp-nav .nav-home-link:hover {
+        color: white !important;
+        background: none !important;
+    }
+    @media (max-width: 500px) {
+        #tp-nav .nav-title { display: none; }
+    }
+</style>
+
+<nav id="tp-nav"><a href="../tp6/exercice5.html">&#8592; Préc.</a><div class="nav-title">TP7 - exercice3<br><a href="../index.html" class="nav-home-link">&#8962; Accueil</a></div><a href="../tp7/exercice5.html">Suiv. &#8594;</a></nav>
+
+    <canvas id="monCanvas" width="300" height="300"></canvas>
+    
+    <div>
+        <button onclick="changeWidth()">Largeur</button>
+        <button onclick="changeHeight()">Hauteur</button>
+        <button onclick="changeColor()">Couleur</button>
+        <button onclick="changeStyle()">Style</button>
+        <button onclick="changeVisibility()">Visibilité</button>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('monCanvas');
+        const ctx = canvas.getContext('2d');
+
+        let rectX = 50;
+        let rectY = 50;
+        let rectW = 50;
+        let rectH = 50;
+
+        const colors = ["yellow", "red", "blue", "green"];
+        let colorIndex = 0;
+
+        let isFilled = true;
+        let isVisible = true;
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            if (!isVisible) return;
+
+            ctx.fillStyle = colors[colorIndex];
+            ctx.strokeStyle = colors[colorIndex];
+            ctx.lineWidth = 2;
+
+            if (isFilled) {
+                ctx.fillRect(rectX, rectY, rectW, rectH);
+            } else {
+                ctx.strokeRect(rectX, rectY, rectW, rectH);
+            }
+        }
+
+        function changeWidth() {
+            rectW += 10;
+            if (rectW > 200) {
+                rectW = 10;
+            }
+            draw();
+        }
+
+        function changeHeight() {
+            rectH += 10;
+            if (rectH > 200) {
+                rectH = 10;
+            }
+            draw();
+        }
+
+        function changeColor() {
+            colorIndex++;
+            if (colorIndex >= colors.length) {
+                colorIndex = 0;
+            }
+            draw();
+        }
+
+        function changeStyle() {
+            isFilled = !isFilled;
+            draw();
+        }
+
+        function changeVisibility() {
+            isVisible = !isVisible;
+            draw();
+        }
+
+        draw();
+    </script>
+
+    <section class="reflexion">
+        <h2>Mon retour sur cet exercice</h2>
+
+        <h3>Ce que j'ai appris</h3>
+        <p>
+            Première découverte de Canvas HTML5 avec <code>canvas.getContext('2d')</code>, <code>fillRect()</code> et <code>strokeRect()</code> pour dessiner des rectangles.
+        </p>
+
+        <h3>Niveau de difficulté</h3>
+        <p><span class="difficulte">⭐⭐⭐ (3/5) - Moyennement difficile</span></p>
+        <p>
+            Canvas c'est un nouveau paradigme à comprendre. Au lieu de créer des éléments HTML, on dessine pixel
+            par pixel sur un "canevas". Il faut comprendre le système de coordonnées, utiliser <code>clearRect()</code>
+            pour effacer avant de redessiner, gérer les états avec les variables JavaScript. C'est pas hyper dur mais
+            ça demande de penser différemment.
+        </p>
+
+        <h3>Mon avis sur l'intérêt pédagogique</h3>
+        <p>
+            Introduction parfaite au Canvas, pose les bases pour des animations et jeux 2D plus complexes.
+        </p>
+
+        <h3>Ce que je pense de mon résultat</h3>
+        <div class="auto-eval">
+            <p><strong>Points positifs :</strong> Toutes les fonctionnalités marchent (changement de taille, couleur, style, visibilité), le code est bien organisé avec des fonctions séparées</p>
+        </div>
+    </section>
+</body>
+</html>

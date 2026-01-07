@@ -1,0 +1,24 @@
+body {
+    background-color: #333;
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 20px;
+    margin: 0;
+}
+
+canvas { 
+    border: 1px solid #fff; 
+    background: #000; 
+}
+
+#canvasSmall {
+    cursor: none; 
+}
+
+.container { 
+    text-align: center; 
+}

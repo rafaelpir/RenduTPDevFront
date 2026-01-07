@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+   <title>Example Layout</title>
+   <meta charset="utf-8" />
+   <link type="text/css" rel="stylesheet" href="tp1_ex2.css"/>
+   <link type="text/css" rel="stylesheet" href="../reflexion.css"/>
+ </head>
+ <body>
+
+<style>
+    body {
+        padding-bottom: 70px !important; 
+        margin-bottom: 0 !important;
+    }
+    #tp-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 99999;
+        background: #000000; 
+        color: white;
+        border-top: 1px solid #333;
+        padding: 10px 20px;
+        font-family: 'Poppins', sans-serif, Arial, sans-serif;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+        box-sizing: border-box;
+    }
+    #tp-nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 0.9rem;
+        background: #222;
+        padding: 8px 15px;
+        border-radius: 4px;
+        transition: 0.3s;
+        border: 1px solid #333;
+        white-space: nowrap;
+    }
+    #tp-nav a:hover {
+        background: #ffffff;
+        color: #000000;
+        border-color: #ffffff;
+    }
+    #tp-nav span {
+        opacity: 0.4;
+        font-size: 0.9rem;
+        cursor: default;
+        color: #888;
+    }
+    #tp-nav .nav-title {
+        font-weight: 600;
+        font-size: 0.8rem;
+        opacity: 0.9;
+        text-align: center;
+        margin: 0 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    #tp-nav .nav-home-link {
+        color: #888 !important;
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+        font-size: 0.75em !important;
+        text-decoration: underline !important;
+        margin-top: 2px;
+        display: inline-block;
+    }
+    #tp-nav .nav-home-link:hover {
+        color: white !important;
+        background: none !important;
+    }
+    @media (max-width: 500px) {
+        #tp-nav .nav-title { display: none; }
+    }
+</style>
+
+<nav id="tp-nav"><a href="../tp1/tp1_ex1.html">&#8592; Préc.</a><div class="nav-title">TP1 - tp1_ex2<br><a href="../index.html" class="nav-home-link">&#8962; Accueil</a></div><a href="../tp2/tp2_ex2.html">Suiv. &#8594;</a></nav>
+
+
+
+
+
+
+
+
+   <div id="page">
+     <header>
+       <p>Header content</p>
+       <ul>
+         <li><a href="#">Link</a></li>
+         <li><a href="#">Link</a></li>
+         <li><a href="#">Link</a></li>
+       </ul> 
+     </header>
+     <div id="content">
+		 <section>
+		   <h1>Welcome to my awesome website.</h1>
+		   <h2>Indeed, this is an awesome website.</h2> 
+		   <p><strong>Primary content.</strong> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse pharetra, arcu in dapibus sagittis, felis leo rhoncus erat, non porttitor urna libero vitae nibh. Ut convallis eros sed magna.</p>
+		   <img src="ressources/photo.jpg" alt="" /> 
+		   <p>Aenean enim purus, adipiscing a, vehicula ut, tempor vitae, justo. Nam laoreet mauris vitae elit. Vivamus eros quam, euismod bibendum, pellentesque ut, tristique ut, nisl. <a href="#">Vestibulum ante ipsum primis</a> in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse non metus. Nullam tempor dictum sapien. Duis enim. In ligula. Cras ut enim. Sed dapibus ante in eros. Nulla facilisi. In rhoncus eleifend nunc. Sed risus nulla, pretium in, itasse platea dictumst. Vestibulum feugiat lectus et justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed aliquet dolor nec ipsum.</p>
+		   <h2>Oooh, more copy&hellip;</h2> 
+		   <p><a href="#">Ut erat nibh</a>, aliquet ut, congue at, tempus in, nunc. Ut aliquet leo et lectus volutpat molestie. Vivamus nunc. Nulla facilisi. Suspendisse dictum nunc tempus elit. Nullam urna quam, bibendum quis, tincidunt a, nonummy euismod, metus. Etiam convallis, dui venenatis feugiat elementum, justo lacus lobortis libero, vel iaculis nibh lectus eu urna. Vivamus arcu. In facilisis quam et lacus. Suspendisse sit amet neque ac enim lobortis ullamcorper. Etiam faucibus sapien ut nunc. Nullam consectetuer vehicula arcu.</p>
+		 </section>
+		 <aside>
+		   <h3>Important Information</h3> 
+		   <p><strong>Secondary content.</strong> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse pharetra, arcu in dapibus sagittis, felis leo rhoncus erat, non porttitor urna libero vitae nibh. Ut convallis eros sed magna. Aenean enim purus, adipiscing a, vehicula ut, tempor vitae, justo. Nam laoreet mauris vitae elit. This is interesting information. Ut erat nibh, aliquet ut, congue at, tempus in, nunc. Ut aliquet leo et lectus volutpat molestie. Vivamus nunc. <a href="#">Read&nbsp;more&nbsp;&rarr;</a> </p>
+		 </aside>
+     </div>
+     <footer>
+       <p>Photograph by <a href="#">Jin Bol</a>.</p>
+     </footer>
+   </div>
+
+   <section class="reflexion">
+       <h2>Mon retour sur cet exercice</h2>
+
+       <h3>Ce que j'ai appris</h3>
+       <p>
+           J'ai appris à créer un layout complet avec Flexbox en utilisant <code>display: flex</code>, <code>justify-content</code>, <code>align-items</code> et <code>flex-direction</code> pour structurer header, contenu principal, sidebar et footer.
+       </p>
+
+       <h3>Niveau de difficulté</h3>
+       <p><span class="difficulte">⭐⭐⭐⭐⭐ (5/5) - Difficile</span></p>
+       <p>
+           Franchement, c'était assez compliqué. Flexbox c'est puissant mais quand on débute, c'est pas évident.
+           Le plus dur c'était de reproduire exactement le layout de la maquette fournie. J'ai galéré avec
+           <code>flex-direction</code>, <code>justify-content</code> et les proportions. Fallait jongler entre
+           <code>flex-grow</code>, <code>flex-shrink</code> et <code>flex-basis</code>. J'ai dû refaire plusieurs
+           fois pour que ça ressemble au modèle.
+       </p>
+
+       <h3>Mon avis sur l'intérêt pédagogique</h3>
+       <p>
+           Flexbox est vraiment la base du layout moderne en CSS, indispensable pour tout développeur front.
+       </p>
+
+       <h3>Ce que je pense de mon résultat</h3>
+       
+   </section>
+ </body>
+</html>

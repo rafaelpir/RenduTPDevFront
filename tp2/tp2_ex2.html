@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TP2 - Exercice 2</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="tp2_ex2.css" />
+		<link rel="stylesheet" href="../reflexion.css" />
+	</head>
+	<body>
+
+<style>
+    body {
+        padding-bottom: 70px !important; 
+        margin-bottom: 0 !important;
+    }
+    #tp-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 99999;
+        background: #000000; 
+        color: white;
+        border-top: 1px solid #333;
+        padding: 10px 20px;
+        font-family: 'Poppins', sans-serif, Arial, sans-serif;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+        box-sizing: border-box;
+    }
+    #tp-nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 0.9rem;
+        background: #222;
+        padding: 8px 15px;
+        border-radius: 4px;
+        transition: 0.3s;
+        border: 1px solid #333;
+        white-space: nowrap;
+    }
+    #tp-nav a:hover {
+        background: #ffffff;
+        color: #000000;
+        border-color: #ffffff;
+    }
+    #tp-nav span {
+        opacity: 0.4;
+        font-size: 0.9rem;
+        cursor: default;
+        color: #888;
+    }
+    #tp-nav .nav-title {
+        font-weight: 600;
+        font-size: 0.8rem;
+        opacity: 0.9;
+        text-align: center;
+        margin: 0 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    #tp-nav .nav-home-link {
+        color: #888 !important;
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+        font-size: 0.75em !important;
+        text-decoration: underline !important;
+        margin-top: 2px;
+        display: inline-block;
+    }
+    #tp-nav .nav-home-link:hover {
+        color: white !important;
+        background: none !important;
+    }
+    @media (max-width: 500px) {
+        #tp-nav .nav-title { display: none; }
+    }
+</style>
+
+<nav id="tp-nav"><a href="../tp1/tp1_ex2.html">&#8592; Préc.</a><div class="nav-title">TP2 - tp2_ex2<br><a href="../index.html" class="nav-home-link">&#8962; Accueil</a></div><a href="../tp2/tp2_ex3.html">Suiv. &#8594;</a></nav>
+
+
+
+
+
+
+
+
+		<div id="container">
+			<div id="item1">Item 1 <br /> height : 50px</div>
+			<div id="item2">Item 2 <br /> width : 25%</div>
+			<div id="item3">Item 3 <br /> height : 50px</div>
+			<div id="item4">Item 4 <br /> height : 50px</div>
+			<div id="item5">Item 5 <br /> height : 50px</div>
+			<div id="item6">Item 6 <br /> width : 50%</div>
+			<div id="item7">Item 7 <br /> width : 25%</div>
+			<div id="item8">Item 8 <br /> height : 100px</div>
+		</div>
+
+		<section class="reflexion">
+		    <h2>Mon retour sur cet exercice</h2>
+
+		    <h3>Ce que j'ai appris</h3>
+		    <p>
+		        J'ai découvert CSS Grid, un système de layout 2D avec <code>display: grid</code>, <code>grid-template-columns/rows</code> et <code>grid-area</code> pour placer précisément les éléments.
+		    </p>
+
+		    <h3>Niveau de difficulté</h3>
+		    <p><span class="difficulte">⭐⭐⭐⭐ (4/5) - Difficile</span></p>
+		    <p>
+		        CSS Grid c'est clairement plus complexe que Flexbox au début. Comprendre la différence entre
+		        <code>fr</code> (fraction), <code>%</code> (pourcentage), et <code>px</code> (pixels) pour les colonnes,
+		        ça demande de la pratique. J'ai eu du mal avec <code>grid-column-start</code> et <code>grid-column-end</code>
+		        pour faire des items qui s'étalent sur plusieurs cases.
+		    </p>
+
+		    <h3>Mon avis sur l'intérêt pédagogique</h3>
+		    <p>
+		        CSS Grid est indispensable pour créer des layouts complexes, parfait pour les galeries, dashboards et layouts modernes.
+		    </p>
+
+		    <h3>Ce que je pense de mon résultat</h3>
+		    <div class="auto-eval">
+		        <p><strong>Points positifs :</strong> La grille est bien structurée, les items occupent les bonnes zones</p>
+		    </div>
+		</section>
+	</body>
+</html>

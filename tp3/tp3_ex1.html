@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP3 - Exercice 1 : Media Queries</title>
+    <link rel="stylesheet" href="../reflexion.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        .bloc {
+            width: 300px;
+            height: 200px;
+            background-color: #3498db;
+            margin: 50px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+
+        .info {
+            text-align: center;
+            margin: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        @media (max-width: 960px) {
+            .bloc {
+                background-color: #e74c3c;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .bloc {
+                background-color: #2ecc71;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<style>
+    body {
+        padding-bottom: 70px !important;
+        margin-bottom: 0 !important;
+    }
+    #tp-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 99999;
+        background: #000000;
+        color: white;
+        border-top: 1px solid #333;
+        padding: 10px 20px;
+        font-family: 'Poppins', sans-serif, Arial, sans-serif;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+        box-sizing: border-box;
+    }
+    #tp-nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 0.9rem;
+        background: #222;
+        padding: 8px 15px;
+        border-radius: 4px;
+        transition: 0.3s;
+        border: 1px solid #333;
+        white-space: nowrap;
+    }
+    #tp-nav a:hover {
+        background: #ffffff;
+        color: #000000;
+        border-color: #ffffff;
+    }
+    #tp-nav span {
+        opacity: 0.4;
+        font-size: 0.9rem;
+        cursor: default;
+        color: #888;
+    }
+    #tp-nav .nav-title {
+        font-weight: 600;
+        font-size: 0.8rem;
+        opacity: 0.9;
+        text-align: center;
+        margin: 0 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    #tp-nav .nav-home-link {
+        color: #888 !important;
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+        font-size: 0.75em !important;
+        text-decoration: underline !important;
+        margin-top: 2px;
+        display: inline-block;
+    }
+    #tp-nav .nav-home-link:hover {
+        color: white !important;
+        background: none !important;
+    }
+    @media (max-width: 500px) {
+        #tp-nav .nav-title { display: none; }
+    }
+</style>
+
+<nav id="tp-nav"><a href="../tp2/tp2_ex3.html">&#8592; Préc.</a><div class="nav-title">TP3 - tp3_ex1<br><a href="../index.html" class="nav-home-link">&#8962; Accueil</a></div><a href="../tp3/tp3_ex3.html">Suiv. &#8594;</a></nav>
+
+<h1>Media Queries - Changement de couleur</h1>
+
+<div class="info">
+    <p><strong>Consigne :</strong> Redimensionnez la fenêtre du navigateur pour voir le bloc changer de couleur</p>
+</div>
+
+<div class="bloc">
+    300 × 200
+</div>
+
+<section class="reflexion">
+    <h2>Mon retour sur cet exercice</h2>
+
+    <h3>Ce que j'ai appris</h3>
+    <p>
+        J'ai appris à utiliser les <code>@media queries</code> pour modifier le style d'un élément en fonction de la largeur du navigateur. C'est la base du responsive design.
+    </p>
+
+    <h3>Niveau de difficulté</h3>
+    <p><span class="difficulte">⭐⭐ (2/5) - Facile</span></p>
+    <p>
+        Exercice assez simple qui permet de comprendre le principe des media queries. Il suffit de créer un bloc avec des dimensions fixes et de changer sa couleur de fond selon la taille de la fenêtre.
+    </p>
+
+    <h3>Mon avis sur l'intérêt pédagogique</h3>
+    <p>
+        Excellent exercice d'introduction aux media queries. Simple mais efficace pour comprendre le concept.
+    </p>
+
+    <h3>Ce que je pense de mon résultat</h3>
+    <div class="auto-eval">
+        <p><strong>Points positifs :</strong> Le bloc change bien de couleur aux bons breakpoints, les dimensions sont fixes comme demandé</p>
+    </div>
+</section>
+
+</body>
+</html>

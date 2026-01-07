@@ -1,0 +1,145 @@
+body {
+    background-color: #646464;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+main {
+    background-color: #ffffff;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+header {
+    background-color: #be002d;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #fff;
+}
+
+.gauche {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    padding-left: 20px;
+}
+
+.gauche h1 {
+    margin: 0;
+    font-size: 1.8em;
+    text-transform: uppercase;
+}
+
+.gauche h4, .gauche p {
+    margin: 5px 0 0 0;
+    font-size: 1em;
+    font-weight: normal;
+    opacity: 0.9;
+}
+
+.droite {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 10px;
+    padding-right: 20px;
+}
+
+.droite div, .header-code {
+    border: 2px dashed white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 1.1em;
+}
+
+table {
+    background-color: #dbdbdb;
+    margin: 20px auto;
+    width: 98%;
+    text-align: center;
+    border-collapse: collapse;
+    border: 1px solid #000;
+}
+
+th {
+    background-color: #be002d;
+    color: white;
+    border: 1px solid #000;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+td {
+    color: #008080;
+    border: 1px solid #000;
+    padding: 10px;
+    background-color: #dbdbdb;
+    line-height: 1.5;
+}
+
+.axe-main {
+    background-color: #ff7e70;
+    color: white;
+}
+
+.axe-cross {
+    background-color: #ff7e70;
+    color: white;
+}
+
+.text-red {
+    color: #be002d;
+}
+
+.droite-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    border: 2px dashed white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+.item {
+    background-color: white;
+    color: #be002d;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.fin th {
+    text-align: center;
+    width: 25%;
+}
+
+.fin td {
+    text-align: center;
+}
+
+.compte-rendu {
+    margin: 30px 20px 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+    color: #333;
+    font-weight: normal;
+}
+
+.compte-rendu h3 {
+    color: #be002d;
+    margin-top: 0;
+}

@@ -1,0 +1,86 @@
+body {
+    background-color: #ccc;
+    font-family: sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#telechargement {
+    list-style: none;
+    padding: 0;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#telechargement li {
+    border-bottom: 2px solid black;
+    padding: 15px 0;
+}
+
+#telechargement a {
+    text-decoration: underline;
+    color: #8B0000;
+    font-weight: bold;
+    display: block;
+    padding-left: 60px;
+    min-height: 48px;
+    line-height: 48px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 40px auto;
+}
+
+#telechargement a::before {
+    content: attr(href);
+}
+
+#telechargement a[hreflang="fr"]::after {
+    content: " (" url('images/fr.jpg') ")";
+    vertical-align: middle;
+}
+
+#telechargement a[hreflang="en"]::after {
+    content: " (" url('images/en.jpg') ")";
+    vertical-align: middle;
+}
+
+#telechargement a[href$=".pdf"] {
+    background-image: url('images/pdf.png');
+}
+
+#telechargement a[href$=".doc"] {
+    background-image: url('images/doc.png');
+}
+
+#telechargement a[href$=".xls"] {
+    background-image: url('images/xls.png');
+}
+
+#telechargement a[href$=".png"] {
+    background-image: url('images/png.png');
+}
+
+#telechargement a[href$=".rtf"] {
+    background-image: url('images/rtf.png');
+}
+
+#telechargement a[href$=".zip"] {
+    background-image: url('images/zip.png');
+}
+
+#telechargement a[href$=".svg"] {
+    background-image: url('images/svg.png');
+}
+
+#telechargement a[href$=".ods"] {
+    background-image: url('images/ods.png');
+}
+
+#telechargement a[href$=".ppt"] {
+    background-image: url('images/ppt.png');
+}

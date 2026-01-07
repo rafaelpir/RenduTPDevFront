@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Exercice 3 - Scroll et Hélice</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../reflexion.css" />
+</head>
+<body>
+
+<style>
+    body {
+        padding-bottom: 70px !important; 
+        margin-bottom: 0 !important;
+    }
+    #tp-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 99999;
+        background: #000000; 
+        color: white;
+        border-top: 1px solid #333;
+        padding: 10px 20px;
+        font-family: 'Poppins', sans-serif, Arial, sans-serif;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+        box-sizing: border-box;
+    }
+    #tp-nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 0.9rem;
+        background: #222;
+        padding: 8px 15px;
+        border-radius: 4px;
+        transition: 0.3s;
+        border: 1px solid #333;
+        white-space: nowrap;
+    }
+    #tp-nav a:hover {
+        background: #ffffff;
+        color: #000000;
+        border-color: #ffffff;
+    }
+    #tp-nav span {
+        opacity: 0.4;
+        font-size: 0.9rem;
+        cursor: default;
+        color: #888;
+    }
+    #tp-nav .nav-title {
+        font-weight: 600;
+        font-size: 0.8rem;
+        opacity: 0.9;
+        text-align: center;
+        margin: 0 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    #tp-nav .nav-home-link {
+        color: #888 !important;
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+        font-size: 0.75em !important;
+        text-decoration: underline !important;
+        margin-top: 2px;
+        display: inline-block;
+    }
+    #tp-nav .nav-home-link:hover {
+        color: white !important;
+        background: none !important;
+    }
+    @media (max-width: 500px) {
+        #tp-nav .nav-title { display: none; }
+    }
+
+    #helice-fixe {
+        position: fixed;
+        top: 30%;
+        right: 10%;
+        width: 150px;
+        height: 150px;
+        z-index: 10;
+    }
+
+    body > p {
+        max-width: 40%;
+        margin-left: 0;
+        line-height: 1.6;
+        text-align: justify;
+    }
+</style>
+
+<nav id="tp-nav"><a href="../tp5/exercice6.html">&#8592; Préc.</a><div class="nav-title">TP6 - ex3<br><a href="../index.html" class="nav-home-link">&#8962; Accueil</a></div><a href="../tp6/exercice5.html">Suiv. &#8594;</a></nav>
+
+    <h1>L'événement scroll en javascript et une animation</h1>
+    
+    <img id="helice-fixe" src="helice.png" alt="Hélice" />
+    
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac felis enim. Aenean varius augue nec leo viverra non eleifend neque interdum. Curabitur pretium dictum tortor, eget malesuada purus convallis sed. Morbi eget accumsan sapien. Phasellus ornare lacinia magna, et placerat justo dapibus at. Donec eleifend porttitor augue ut egestas. Vivamus porta aliquet lectus, vel fermentum diam consequat vel. Etiam pulvinar dignissim orci, non dapibus lectus fringilla a. Donec ligula dolor, fringilla nec porttitor nec, ultricies a purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus et massa at massa euismod faucibus non at risus. Curabitur sed nunc justo. Sed sed justo lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque a hibendum diam. Morbi in justo est. Aenean elit turpis, molestie ut facilisis sed, congue non dui.</p>
+    <p>Morbi vel enim nisi, convallis pharetra ligula. Nunc mauris dui, pharetra non tempus ac, tincidunt quis est. Fusce nec metus vitae nulla fringilla convallis. Fusce vitae nulla ligula. Quisque convallis turpis orci, a adipiscing sem. Duis odio elit, vehicula et porttitor at, gravida non ante. Aliquam eu dignissim velit. Curabitur neque leo, pharetra vel rutrum id, convallis a ligula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque magna dui, condimentum non placerat ut, commodo nec nunc. Nullam et elit felis. Nullam vel nulla non turpis iaculis tincidunt dapibus sit amet turpis. Proin id lectus iaculis turpis vestibulum pharetra ut et velit. Pellentesque metus dolor, cursus non commodo at, tempus et libero. Quisque nisi enim, ultrices ultricies cursus in, volutpat sed orci. Quisque vel tempor libero.</p>
+    <p>Maecenas commodo elit non neque lobortis congue ornare ac libero. Phasellus a imperdiet lorem. Donec posuere hendrerit fringilla. In lacus urna, vehicula ut bibendum eu, dictum in turpis. Maecenas viverra consectetur est nec cursus. Aliquam eu gravida urna. Curabitur a leo ut metus viverra auctor vitae id turpis. Quisque erat quam, egestas sed euismod et, tristique vitae sem. Etiam varius dui at est aliquam pharetra. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus eget leo magna, molestie vestibulum nulla. Etiam rutrum accumsan dignissim. Sed dictum cor convallis orci in lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac felis enim. Aenean varius augue nec leo viverra non eleifend neque interdum. Curabitur pretium dictum tortor, eget malesuada purus convallis sed. Morbi eget accumsan sapien. Phasellus ornare lacinia maqna, et placerat justo dapibus at. Donec eleifend porttitor anque ut egestas. Vivamus porta</p>
+    <p>Suspendisse potenti. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet.</p>
+    <p>Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit amet leo consequat posuere.</p>
+    <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero. Vestibulum mollis mauris enim.</p>
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula. Aliquam vitae turpis ipsum. Phasellus ultricies ultrices nulla, vel semper massa imperdiet vel. Maecenas imperdiet dictum vehicula. Integer posuere urna a elit congue molestie. Sed auctor pretium est, vitae cursus urna luctus nec.</p>
+    <p>Donec ac eros quis nisl accumsan interdum. Sed vel magna a eros fermentum consequat. Aenean erat eros, eleifend in ornare sed, hendrerit eget nisi. Maecenas porttitor lorem id nisl commodo molestie. Aliquam cursus, massa vitae pretium faucibus, elit tellus adipiscing massa, sit amet blandit tellus nunc vitae dolor. Quisque magna enim, varius ac vehicula eget, mattis quis elit. Curabitur ac lorem eu ipsum varius volutpat. Maecenas ullamcorper, dui vel hendrerit interdum, ipsum est consectetur lacus, eu pulvinar sapien velit nec nunc.</p>
+
+    <script>
+        window.addEventListener('load', run, false);
+
+        function run() {
+            const helice = document.getElementById('helice-fixe');
+            let rotationAngle = 0;
+            let isScrolling = false;
+            let scrollTimeout;
+
+            function rotateHelice() {
+                if (!isScrolling) return;
+
+                const currentScrollY = window.scrollY;
+                rotationAngle = currentScrollY * 0.5;
+
+                helice.style.transform = `rotate(${rotationAngle}deg)`;
+                requestAnimationFrame(rotateHelice);
+            }
+
+            window.addEventListener('scroll', function() {
+                if (!isScrolling) {
+                    isScrolling = true;
+                    rotateHelice();
+                }
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(function() {
+                    isScrolling = false;
+                }, 66);
+            }, false);
+        }
+    </script>
+
+    <section class="reflexion">
+        <h2>Mon retour sur cet exercice</h2>
+        <h3>Ce que j'ai appris</h3>
+        <p>
+            J'ai combiné <code>scroll</code> avec <code>requestAnimationFrame()</code> pour créer une animation fluide d'hélice qui tourne en fonction du scroll.
+        </p>
+        <div class="auto-eval">
+            <p><strong>Points positifs :</strong> L'animation est fluide, le texte défile mais l'image reste fixe à l'écran.</p>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tp1_ex1.css">
+    <link rel="stylesheet" href="../reflexion.css">
+    <title>TP1 Exercice 1 - Flexbox</title>
+</head>
+<body>
+
+<style>
+    body {
+        padding-bottom: 70px !important; 
+        margin-bottom: 0 !important;
+    }
+    #tp-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 99999;
+        background: #000000; 
+        color: white;
+        border-top: 1px solid #333;
+        padding: 10px 20px;
+        font-family: 'Poppins', sans-serif, Arial, sans-serif;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+        box-sizing: border-box;
+    }
+    #tp-nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 0.9rem;
+        background: #222;
+        padding: 8px 15px;
+        border-radius: 4px;
+        transition: 0.3s;
+        border: 1px solid #333;
+        white-space: nowrap;
+    }
+    #tp-nav a:hover {
+        background: #ffffff;
+        color: #000000;
+        border-color: #ffffff;
+    }
+    #tp-nav span {
+        opacity: 0.4;
+        font-size: 0.9rem;
+        cursor: default;
+        color: #888;
+    }
+    #tp-nav .nav-title {
+        font-weight: 600;
+        font-size: 0.8rem;
+        opacity: 0.9;
+        text-align: center;
+        margin: 0 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    #tp-nav .nav-home-link {
+        color: #888 !important;
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+        font-size: 0.75em !important;
+        text-decoration: underline !important;
+        margin-top: 2px;
+        display: inline-block;
+    }
+    #tp-nav .nav-home-link:hover {
+        color: white !important;
+        background: none !important;
+    }
+    @media (max-width: 500px) {
+        #tp-nav .nav-title { display: none; }
+    }
+</style>
+
+<nav id="tp-nav"><span>&#8592; Préc.</span><div class="nav-title">TP1 - tp1_ex1<br><a href="../index.html" class="nav-home-link">&#8962; Accueil</a></div><a href="../tp1/tp1_ex2.html">Suiv. &#8594;</a></nav>
+
+
+
+
+
+
+
+
+    <main>
+        <section>
+            <header>
+                <div class="gauche">
+                    <h1>FLEX CONTAINER</h1>
+                    <h4>(element parent)</h4>
+                </div>
+                <div class="droite">
+                    <div><code>display: flex</code></div>
+                    <div id="deux"><code>display: inline-flex</code></div>
+                </div>
+            </header>
+        </section>
+        
+        <table>
+            <tr style="background-color: rgb(190, 0, 45);">
+                <th>flex direction</th>
+                <th>flex wrap</th>
+                <th>justify content</th>
+                <th>align-items</th>
+                <th>align-content</th>
+            </tr>
+
+            <tr>
+                <td rowspan="2">
+                    <span style="color: rgb(190, 0, 45);">row</span> <br />
+                    row-reverse <br />
+                    column <br />
+                    column-reverse
+                </td>
+                <td rowspan="2">
+                    <span style="color: rgb(190, 0, 45);">no-wrap</span> <br />
+                    wrap <br />
+                    wrap-reverse
+                </td>
+                <td style="background-color: rgb(255, 126, 112); color :aliceblue;">axe principal (main)</td>
+                <td colspan="2" style="background-color: rgb(255, 126, 112); color :aliceblue;">axe secondaire (cross)</td>
+            </tr>
+
+            <tr>
+                <td rowspan="3">
+                    flex-start <br />
+                    flex-end <br />
+                    center <br />
+                    space-between <br />
+                    space-around <br />
+                    space-evenly
+                </td>
+                <td rowspan="3">
+                    flex-start <br />
+                    flex-end <br />
+                    center <br />
+                    baseline <br />
+                    <span style="color: rgb(190, 0, 45);">stretch</span>
+                </td>
+                <td rowspan="3">
+                    flex-start <br />
+                    flex-end <br />
+                    center <br />
+                    space-between <br />
+                    space-around <br />
+                    <span style="color: rgb(190, 0, 45);">stretch</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="background-color: rgb(190, 0, 45); color:white;">flex-flow</td>
+                </tr>
+
+            <tr>
+                <td colspan="2">flex-direction + flex-wrap</td>
+                </tr>
+        </table>
+
+        <header>
+            <div class="gauche">
+                <h1>FLEX ITEMS</h1>
+                <p>(element enfant)</p>
+            </div>
+            <div class="droite-item">
+                <div class="item" style="color:rgb(190, 0, 45)"><p>ITEM 1</p></div>
+                <div class="item" style="color:rgb(190, 0, 45)"><p>ITEM 2</p></div>
+                <div class="item" style="color:rgb(190, 0, 45)"><p>ITEM 3</p></div>
+            </div>
+        </header>
+
+        <section>
+            <table class="fin">
+                <tr><th>order</th><td colspan="3">0</td></tr>
+                <tr><th>flex-grow</th><td>0</td><td rowspan="3">flex : <span style="color: rgb(190, 0, 45);">0 1 auto</span></td></tr>
+                <tr><th>flex-shrink</th><td>1</td></tr>
+                <tr><th>flex-basis</th><td>auto</td></tr>
+                <tr><th>align-self</th><td colspan="3">auto</td></tr>
+            </table>
+        </section>
+
+        <section class="compte-rendu">
+            <h3>Analyse de l'exercice</h3>
+            <p><strong>Connaissances :</strong> J'ai utilisé les propriétés <code>colspan</code> et <code>rowspan</code> des tableaux HTML pour structurer des données complexes, en particulier pour aligner les colonnes "flex-flow" avec le reste du tableau.</p>
+            <p><strong>Difficulté :</strong> Moyenne. La gestion des fusions de cellules (rowspan) pour que les colonnes de droite couvrent exactement la hauteur des lignes de gauche demandait de la précision.</p>
+            <p><strong>Avis :</strong> C'est un excellent exercice pour comprendre la structure rigide des tableaux HTML par rapport à la souplesse de Flexbox.</p>
+        </section>
+
+    </main>
+</body>
+</html>

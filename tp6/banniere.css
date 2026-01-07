@@ -1,0 +1,101 @@
+body {
+    padding: 50px;
+    background-color: #f0f0f0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.banniere-luxe {
+    width: 728px;
+    height: 90px;
+    background-color: #24130d;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    border: 1px solid #4a2c20;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+.logo-bg {
+    position: absolute;
+    top: -15px;
+    left: 280px;
+    font-size: 100px;
+    color: rgba(204, 182, 126, 0.05);
+    font-weight: bold;
+    z-index: 1;
+}
+
+.produit-luxe {
+    position: absolute;
+    height: 70px;
+    bottom: 10px;
+    right: -100px;
+    z-index: 10;
+    filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.5));
+    animation: entree-produit 2s ease-out forwards 0.5s;
+}
+
+.conteneur-texte {
+    position: absolute;
+    top: 22px;
+    left: 40px;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+}
+
+.marque {
+    font-size: 22px;
+    letter-spacing: 4px;
+    color: #ccb67e;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: apparition-elegante 1.5s ease-out forwards;
+}
+
+.collection {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #fff;
+    margin-top: 5px;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: apparition-elegante 1.5s ease-out forwards 0.8s;
+}
+
+.bouton-or {
+    position: absolute;
+    right: 250px;
+    top: 32px;
+    border: 1px solid #ccb67e;
+    color: #ccb67e;
+    padding: 8px 20px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.5s;
+    opacity: 0;
+    animation: fade-in-bouton 1s ease-out forwards 1.5s;
+    z-index: 20;
+}
+
+.bouton-or:hover {
+    background-color: #ccb67e;
+    color: #24130d;
+}
+
+@keyframes entree-produit {
+    from { right: -100px; opacity: 0; }
+    to { right: 80px; opacity: 1; }
+}
+
+@keyframes apparition-elegante {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in-bouton {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
