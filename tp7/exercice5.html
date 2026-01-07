@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>TP7 - Exercice 5</title>
+    <link rel="stylesheet" href="../reflexion.css" />
+</head>
+<body>
+
+<style>
+    body {
+        padding-bottom: 70px !important; 
+        margin-bottom: 0 !important;
+    }
+    #tp-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 99999;
+        background: #000000; 
+        color: white;
+        border-top: 1px solid #333;
+        padding: 10px 20px;
+        font-family: 'Poppins', sans-serif, Arial, sans-serif;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+        box-sizing: border-box;
+    }
+    #tp-nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 0.9rem;
+        background: #222;
+        padding: 8px 15px;
+        border-radius: 4px;
+        transition: 0.3s;
+        border: 1px solid #333;
+        white-space: nowrap;
+    }
+    #tp-nav a:hover {
+        background: #ffffff;
+        color: #000000;
+        border-color: #ffffff;
+    }
+    #tp-nav span {
+        opacity: 0.4;
+        font-size: 0.9rem;
+        cursor: default;
+        color: #888;
+    }
+    #tp-nav .nav-title {
+        font-weight: 600;
+        font-size: 0.8rem;
+        opacity: 0.9;
+        text-align: center;
+        margin: 0 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    #tp-nav .nav-home-link {
+        color: #888 !important;
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+        font-size: 0.75em !important;
+        text-decoration: underline !important;
+        margin-top: 2px;
+        display: inline-block;
+    }
+    #tp-nav .nav-home-link:hover {
+        color: white !important;
+        background: none !important;
+    }
+    @media (max-width: 500px) {
+        #tp-nav .nav-title { display: none; }
+    }
+</style>
+
+<nav id="tp-nav"><a href="../tp7/exercice3.html">&#8592; Préc.</a><div class="nav-title">TP7 - exercice5<br><a href="../index.html" class="nav-home-link">&#8962; Accueil</a></div><a href="../tp8/exercice4.html">Suiv. &#8594;</a></nav>
+
+    <h2>Question 1</h2>
+    <canvas id="canvas1" width="1280" height="720"></canvas>
+
+    <h2>Question 2</h2>
+    <canvas id="canvas2" width="1280" height="720"></canvas>
+
+    <h2>Question 3</h2>
+    <p>Oui, il faut rogner l'image. Il faut rogner la hauteur.</p>
+    <canvas id="canvas3" width="1280" height="720"></canvas>
+
+    <h2>Question 4</h2>
+    <canvas id="canvas4"></canvas>
+
+    <script>
+        const img = new Image();
+        img.src = '600x450.jpg';
+
+        img.onload = function() {
+            dessinerQ1();
+            dessinerQ2();
+            dessinerQ3();
+            dessinerQ4();
+        };
+
+        function dessinerQ1() {
+            const canvas = document.getElementById('canvas1');
+            const ctx = canvas.getContext('2d');
+            const x = (canvas.width - img.width) / 2;
+            const y = (canvas.height - img.height) / 2;
+            ctx.drawImage(img, x, y);
+        }
+
+        function dessinerQ2() {
+            const canvas = document.getElementById('canvas2');
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        }
+
+        function dessinerQ3() {
+            const canvas = document.getElementById('canvas3');
+            const ctx = canvas.getContext('2d');
+            
+            const scale = canvas.width / img.width;
+            const newHeight = img.height * scale;
+            const newWidth = canvas.width;
+            
+            const y = (canvas.height - newHeight) / 2;
+
+            ctx.drawImage(img, 0, y, newWidth, newHeight);
+        }
+
+        function dessinerQ4() {
+            const canvas = document.getElementById('canvas4');
+            const ctx = canvas.getContext('2d');
+
+            canvas.width = img.width * 2;
+            canvas.height = img.height;
+
+            ctx.drawImage(img, img.width, 0);
+
+            ctx.save();
+            ctx.translate(img.width, 0);
+            ctx.scale(-1, 1);
+            ctx.drawImage(img, 0, 0);
+            ctx.restore();
+        }
+    </script>
+
+    <section class="reflexion">
+        <h2>Mon retour sur cet exercice</h2>
+
+        <h3>Ce que j'ai appris</h3>
+        <p>
+            J'ai découvert <code>drawImage()</code> pour afficher et transformer des images : centrer, étirer, et créer un effet miroir avec <code>scale(-1, 1)</code>.
+        </p>
+
+        <h3>Niveau de difficulté</h3>
+        <p><span class="difficulte">⭐⭐⭐⭐ (4/5) - Difficile</span></p>
+        <p>
+            Les transformations sur canvas c'est pas évident ! Comprendre comment <code>translate()</code> et
+            <code>scale()</code> fonctionnent ensemble pour créer l'effet miroir, c'est pas intuitif. Il faut
+            aussi maîtriser les calculs pour centrer l'image et garder les bonnes proportions. J'ai dû réfléchir
+            pas mal sur la question 3 pour éviter la déformation.
+        </p>
+
+        <h3>Mon avis sur l'intérêt pédagogique</h3>
+        <p>
+            Exercice clé pour manipuler des images sur canvas, base pour les jeux et applications graphiques.
+        </p>
+
+        <h3>Ce que je pense de mon résultat</h3>
+        <div class="auto-eval">
+            <p><strong>Points positifs :</strong> Toutes les questions sont résolues correctement, l'image est bien manipulée dans chaque cas, l'effet miroir fonctionne nickel</p>
+        </div>
+    </section>
+</body>
+</html>

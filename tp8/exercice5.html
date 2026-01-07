@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>TP8 - Exercice 5</title>
+    <link rel="stylesheet" href="exercice5.css">
+    <link rel="stylesheet" href="../reflexion.css">
+</head>
+<body>
+
+<style>
+    body {
+        padding-bottom: 70px !important; 
+        margin-bottom: 0 !important;
+    }
+    #tp-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 99999;
+        background: #000000; 
+        color: white;
+        border-top: 1px solid #333;
+        padding: 10px 20px;
+        font-family: 'Poppins', sans-serif, Arial, sans-serif;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+        box-sizing: border-box;
+    }
+    #tp-nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 0.9rem;
+        background: #222;
+        padding: 8px 15px;
+        border-radius: 4px;
+        transition: 0.3s;
+        border: 1px solid #333;
+        white-space: nowrap;
+    }
+    #tp-nav a:hover {
+        background: #ffffff;
+        color: #000000;
+        border-color: #ffffff;
+    }
+    #tp-nav span {
+        opacity: 0.4;
+        font-size: 0.9rem;
+        cursor: default;
+        color: #888;
+    }
+    #tp-nav .nav-title {
+        font-weight: 600;
+        font-size: 0.8rem;
+        opacity: 0.9;
+        text-align: center;
+        margin: 0 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    #tp-nav .nav-home-link {
+        color: #888 !important;
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+        font-size: 0.75em !important;
+        text-decoration: underline !important;
+        margin-top: 2px;
+        display: inline-block;
+    }
+    #tp-nav .nav-home-link:hover {
+        color: white !important;
+        background: none !important;
+    }
+    @media (max-width: 500px) {
+        #tp-nav .nav-title { display: none; }
+    }
+</style>
+
+<nav id="tp-nav"><a href="../tp8/exercice4.html">&#8592; Préc.</a><div class="nav-title">TP8 - exercice5<br><a href="../index.html" class="nav-home-link">&#8962; Accueil</a></div><span>Suiv. &#8594;</span></nav>
+
+
+
+
+
+
+
+
+
+    <div class="container">
+        <h3>Aperçu (640x360)</h3>
+        <canvas id="canvasSmall" width="640" height="360"></canvas>
+    </div>
+
+    <div class="container">
+        <h3>Loupe (Taille réelle)</h3>
+        <canvas id="canvasZoom" width="300" height="300"></canvas>
+    </div>
+
+    <script src="exercice5.js"></script>
+
+    <section class="reflexion">
+        <h2>Mon retour sur cet exercice</h2>
+
+        <h3>Ce que j'ai appris</h3>
+        <p>
+            J'ai créé une loupe/zoom sur canvas en affichant une version réduite puis en zoomant la zone sous la souris sur un second canvas.
+        </p>
+
+        <h3>Niveau de difficulté</h3>
+        <p><span class="difficulte">⭐⭐⭐⭐ (4/5) - Difficile</span></p>
+        <p>
+            La partie la plus compliquée c'est de calculer correctement quelle zone extraire de l'image originale en fonction
+            de la position de la souris. Il faut gérer les proportions (l'image est réduite dans le premier canvas), calculer
+            les coordonnées source, et s'assurer qu'on ne sort pas des limites de l'image. Les calculs de mapping entre les
+            coordonnées du canvas et les coordonnées de l'image m'ont donné du fil à retordre.
+        </p>
+
+        <h3>Mon avis sur l'intérêt pédagogique</h3>
+        <p>
+            Exercice avancé qui montre la précision qu'on peut atteindre avec canvas et les calculs 2D.
+        </p>
+
+        <h3>Ce que je pense de mon résultat</h3>
+        <div class="auto-eval">
+            <p><strong>Points positifs :</strong> La loupe fonctionne bien, le zoom est précis, l'effet est fluide au mouvement de la souris</p>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,8 @@
+node_modules/
+.DS_Store
+*.log
+.vscode/
+.idea/
+add_nav.js
+Thumbs.db
+.AppleDouble/

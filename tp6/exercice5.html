@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Bannière Luxe - TP6</title>
+    <link rel="stylesheet" href="banniere.css">
+    <link rel="stylesheet" href="../reflexion.css">
+</head>
+<body>
+
+<style>
+    body {
+        padding-bottom: 70px !important; 
+        margin-bottom: 0 !important;
+    }
+    #tp-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 99999;
+        background: #000000; 
+        color: white;
+        border-top: 1px solid #333;
+        padding: 10px 20px;
+        font-family: 'Poppins', sans-serif, Arial, sans-serif;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+        box-sizing: border-box;
+    }
+    #tp-nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 0.9rem;
+        background: #222;
+        padding: 8px 15px;
+        border-radius: 4px;
+        transition: 0.3s;
+        border: 1px solid #333;
+        white-space: nowrap;
+    }
+    #tp-nav a:hover {
+        background: #ffffff;
+        color: #000000;
+        border-color: #ffffff;
+    }
+    #tp-nav span {
+        opacity: 0.4;
+        font-size: 0.9rem;
+        cursor: default;
+        color: #888;
+    }
+    #tp-nav .nav-title {
+        font-weight: 600;
+        font-size: 0.8rem;
+        opacity: 0.9;
+        text-align: center;
+        margin: 0 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    #tp-nav .nav-home-link {
+        color: #888 !important;
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+        font-size: 0.75em !important;
+        text-decoration: underline !important;
+        margin-top: 2px;
+        display: inline-block;
+    }
+    #tp-nav .nav-home-link:hover {
+        color: white !important;
+        background: none !important;
+    }
+    @media (max-width: 500px) {
+        #tp-nav .nav-title { display: none; }
+    }
+</style>
+
+<nav id="tp-nav"><a href="../tp6/ex3.html">&#8592; Préc.</a><div class="nav-title">TP6 - exercice5<br><a href="../index.html" class="nav-home-link">&#8962; Accueil</a></div><a href="../tp7/exercice3.html">Suiv. &#8594;</a></nav>
+
+
+
+
+
+
+
+
+    <div class="banniere-luxe">
+        <div class="logo-bg">LV</div>
+        <div class="conteneur-texte">
+            <span class="marque">LOUIS VUITTON</span>
+            <span class="collection">NOUVELLE COLLECTION</span>
+        </div>
+        <img src="tshirt.png" alt="t-shirt" class="produit-luxe">
+        <div class="bouton-or">DÉCOUVRIR</div>
+    </div>
+
+    <section class="reflexion">
+        <h2>Mon retour sur cet exercice (EXERCICE IMPOSÉ)</h2>
+
+        <h3>Ce que j'ai appris</h3>
+        <p>
+            J'ai travaillé sur une bannière luxe avec <code>linear-gradient</code>, <code>text-shadow</code>, <code>box-shadow</code> et animations <code>@keyframes</code> pour un effet haut de gamme.
+        </p>
+
+        <h3>Niveau de difficulté</h3>
+        <p><span class="difficulte">⭐⭐⭐ (3/5) - Moyennement difficile</span></p>
+        <p>
+            Le plus dur c'était de reproduire l'esprit "luxe" sans que ça fasse cheap. Il faut trouver le bon
+            équilibre entre les effets (ombres, dégradés) et la simplicité. Le positionnement absolu des éléments
+            demande aussi de la précision pour que tout soit bien aligné. J'ai dû faire pas mal d'essais/erreurs
+            pour que les proportions et les espacements soient harmonieux.
+        </p>
+
+        <h3>Mon avis sur l'intérêt pédagogique</h3>
+        <p>
+            Bon exercice pour maîtriser les détails CSS et créer un design élégant et professionnel.
+        </p>
+
+        <h3>Ce que je pense de mon résultat</h3>
+        <div class="auto-eval">
+            <p><strong>Points positifs :</strong> L'effet luxe est plutôt réussi, les couleurs or/noir fonctionnent bien ensemble, le logo en arrière-plan donne de la profondeur</p>
+        </div>
+    </section>
+</body>
+</html>
